@@ -14,5 +14,5 @@ file.close()
 previous_elf.sort()
 top_elf = previous_elf[-1]
 top_3_elfs = sum(previous_elf[-3:])
-print("Elf with the most value:", (top_elf))
-print("Sum of values for top 3 elfs:", (top_3_elfs))
+print("Elf with the most value:", top_elf)
+print("Sum of values for top 3 elfs:", top_3_elfs)
