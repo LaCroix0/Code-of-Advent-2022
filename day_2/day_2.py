@@ -33,7 +33,8 @@ def match(opponent_move, your_move):
             wynik = 0 + points[your_move]
             return wynik
     else:
-        return 6 + points[your_move]
+        wynik = 6 + points[your_move]
+        return wynik
 
 def predicted_match(opponent_move, your_move):
     for x in rules_draw:
@@ -42,9 +43,8 @@ def predicted_match(opponent_move, your_move):
     for y in rules:
         if opponent_move == y and your_move == "X":
             return match(y, rules[y])
-    for z in rules:
-        if opponent_move == z and your_move == "Z":
-            return match(z, rules_win[z])
+        elif opponent_move == y and your_move == "Z":
+            return match(y, rules_win[y])
 
 total_points = 0
 predicted_points = 0
@@ -54,7 +54,7 @@ with open('input.txt', 'r') as file:
         linia = str(line)
         total_points += match(linia[0], linia[2])
         predicted_points += predicted_match(linia[0], linia[2])
+file.close()
 
-
-print(f"Total number of points:",total_points)
-print(f"Number of points with predicted outcome:",predicted_points)
+print(f"Total number of points:" ,total_points)
+print(f"Number of points with predicted outcome:" ,predicted_points)
