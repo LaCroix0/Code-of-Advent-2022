@@ -1,6 +1,6 @@
 total = 0
 previous_elf = []
-with open('input.txt', 'r') as file:
+with open("input.txt", 'r') as file:
     for line in file:
         try:
             num = int(line)
