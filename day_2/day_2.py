@@ -55,5 +55,6 @@ with open('input.txt', 'r') as file:
         total_points += match(linia[0], linia[2])
         predicted_points += predicted_match(linia[0], linia[2])
 
+
 print(f"Total number of points:",total_points)
 print(f"Number of points with predicted outcome:",predicted_points)
