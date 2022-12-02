@@ -10,6 +10,7 @@ with open('input.txt', 'r') as file:
             previous_elf.append(total)
             total = 0
             # print("-" * 20)
+file.close()
 previous_elf.sort()
 top_elf = previous_elf[-1]
 top_3_elfs = sum(previous_elf[-3:])
